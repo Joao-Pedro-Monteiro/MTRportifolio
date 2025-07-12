@@ -1,0 +1,330 @@
+#introduction{
+    width: 100%;
+    height: fit-content;
+    margin-top: 75px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: auto;
+}
+
+/*! INTRO LEFT ===================================*/
+#introduction-lefSpace{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+}
+#introduction-title{
+    font-weight: 400;
+    font-size: 36px;
+}
+#introduction-title::after{
+    content: "JOÃO MONTEIRO";
+    font-size: 36px;
+    font-weight: 600;
+}
+#introduction-text{
+    max-width: 675px;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-bottom: 50px;
+}
+.socialBar{
+    margin-left: 40px;
+}
+
+@media screen and (width < 1010px){
+    #introduction-title{
+        width: 320px;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    #introduction-title::after{
+        content:"JOÃO MONTEIRO";
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .socialBar{
+        margin: 0;
+    }
+}
+@media screen and (width < 450px) {
+    #introduction{
+        padding-left: 30px;
+    }
+    #introduction-text{
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 20px;
+        margin-left: 0;
+        padding-bottom: 50px;
+    }
+}
+@media screen and (width < 400px) {
+    #introduction{
+        padding-left: 15px;
+    }
+}
+/*! INTRO RIGHT ===================================*/
+#introduction-rightSpace{
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
+}
+#introduction-image{
+    width: 30vw;
+    max-width: 470px;
+    height: 100%;
+    max-height: 333px;
+}
+@media screen and (width < 1000px) and (width > 850px){
+    #introduction{
+        padding: 0 5vw;
+    }
+}
+@media screen and (width < 700px) {
+    #introduction-image{
+        display: none;
+    }
+}
+/*! CAROUSEL ===================================*/
+#projects{
+    width: 100vw;
+    height: fit-content;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.05), rgba(255,255,255,0)) no-repeat fixed center/cover;
+    margin-top: 100px;
+    padding: 30px 90px;
+}
+
+#projectsList{
+    width: 100%;
+    max-width: 90%;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 30px;
+}
+
+.projectsList-card{
+    width: 370px;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to Bottom, #ffffff, #bebebe) no-repeat fixed center/cover;
+    border-radius: 40px;
+    transition: all ease-in-out 200ms;
+    cursor: pointer;
+}
+.projectsList-card:hover {
+    transform: scale(0.95);
+}
+
+.card-wordmark{
+    width: fit-content;
+    height: 24px;
+    z-index: 2;
+}
+.card-description{
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    z-index: 2;
+}
+.card-img{
+    z-index: 1;
+}
+@media screen and (width < 1040px) {
+    #projects h1{
+        width: 100%;
+        text-align: center;
+    }
+    #projectsList{
+        margin: 20px auto 0;
+    }
+}
+@media screen and (width < 768px) {
+    #projects{
+        padding: 20px 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects h1{
+        font-size: 26px;
+    }
+    #projectsList{
+        width: fit-content;
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+    }
+    .projectsList-card{
+        transform: scale(0.85);
+        gap: 10px;
+    }
+}
+
+/*! CAROUSEL CARDS INDIVIDUAL STYLES =====================*/
+#Iris .card-img{
+    transform: translate(-70px, +10px);
+    width: 80px;
+}
+#Nexo .card-img{
+    transform: translate(-100px, +20px);
+}
+#FutureNest .card-img{
+    width: 80%;
+    height: 80%;
+    transform: translate(-180px, +50px);
+}
+@media screen and (width < 450px) {
+    #Nexo .card-img{
+        transform: translate(-120px, +20px);
+    }
+    #FutureNest .card-img{
+        width: 80%;
+        height: 80%;
+        transform: translate(-200px, +50px);
+    }
+}
+
+
+/*! ABOUT ===================================*/
+#about{
+    width: 100%;
+    height: fit-content;
+    margin-top: 130px;
+    padding: 0 90px;
+    display: flex;
+    flex-direction: row;
+}
+#about h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#about-left{
+    width: 100%;
+    height: fit-content;
+    padding-right: 30px;
+}
+#about-left p{
+    text-align: center;
+    font-size: 24px;
+}
+
+
+#separator{
+    height: auto;
+    border: solid 1px #fff;
+}
+
+#about-right{
+    width: 100%;
+    height: fit-content;
+    padding-left: 30px;
+}
+#about-right p{
+    text-align: left;
+    font-size: 24px;
+}
+
+@media screen and (width < 1204px) and (width > 768px){
+    #about-left p, #about-right p{
+        font-size: 16px;
+        text-align: left;
+    }
+}
+@media screen and (width < 768px){
+    #about{
+        padding: 0 20px;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    #about h1{
+        margin-bottom: 10px;
+    }
+    #about-left, #about-right{
+        padding: 0;
+    }
+    #about-left p, #about-right p{
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+/*! FOOTER ===================================*/
+
+#footer{
+    width: 100vw;
+    height: 100px;
+    background: #d9d9d90d;
+    margin-top: 150px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+}
+#footer-sup{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer-inf{
+    width: 100%;
+    height: fit-content;
+}
+#footer-logo{
+    width: 50px;
+    height: 50px;
+}
+#footer-copy{
+    width: fit-content;
+    height: 10px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+@media screen and (width < 600px ) {
+    #footer{
+        height: max-content;
+        row-gap: 20px;
+        padding: 10px 20px 10px;
+    }
+    #footer-sup{
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 20px;
+    }
+    #footer-socialBar{
+        transform: translateX(-15px);
+    }
+    #footer-inf{
+        height: fit-content;
+    }
+    #footer-copy{
+        margin: 10px 0 0;
+        font-size: 12px;
+    }
+}
